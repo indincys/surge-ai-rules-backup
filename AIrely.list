@@ -1,0 +1,81 @@
+# AI dependency domains collected from public AI-related rulesets.
+# This list intentionally excludes DOMAIN-SUFFIX,cloudflare.com to avoid
+# catching unrelated Cloudflare-backed sites.
+
+# Cloudflare-specific AI support
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,cloudflareinsights.com
+DOMAIN,static.cloudflareinsights.com
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,gateway.ai.cloudflare.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,cp4.cloudflare.com
+
+# Identity, risk, feature flags, telemetry, support
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN,api.statsig.com
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,segment.io
+DOMAIN,api.segment.io
+DOMAIN-SUFFIX,sentry.io
+DOMAIN,o33249.ingest.sentry.io
+DOMAIN-SUFFIX,sentry-cdn.com
+DOMAIN-SUFFIX,observeit.net
+DOMAIN-SUFFIX,usefathom.com
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,workos.com
+
+# Payments and anti-abuse
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,invoice.stripe.com
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN,openai-api.arkoselabs.com
+DOMAIN-SUFFIX,crixet.com
+DOMAIN-SUFFIX,px-cloud.net
+
+# Realtime / search / customer interaction
+DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,turn.livekit.cloud
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN,in.appcenter.ms
+
+# Vendor infrastructure and artifact delivery
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicom-api-fd-cefkg5c4cydtafam.z01.azurefd.net
+DOMAIN,openaicom.imgix.net
+DOMAIN,studiostaticassetsprod.azureedge.net
+DOMAIN,openai-natural-language-generation-2.azureedge.net
+DOMAIN,openaicom-production-westus.azureedge.net
+DOMAIN,openai-api-files-prod-public.s3-us-west-2.amazonaws.com
+DOMAIN,openai-api-files-public.s3-us-west-2.amazonaws.com
+DOMAIN,openai-files-prod-public.s3-us-west-2.amazonaws.com
+DOMAIN,openai-gpt-3-sandbox.s3-us-west-2.amazonaws.com
+DOMAIN,openai-models-public.s3.us-west-2.amazonaws.com
+DOMAIN,openai-nlg-datasets.s3-us-west-2.amazonaws.com
+DOMAIN,openai-production.s3.amazonaws.com
+DOMAIN,openai.egnyte.com
+DOMAIN,apple-relay.fastly-edge.com
+
+# Low-confidence shared CDNs and utilities kept for completeness
+DOMAIN-SUFFIX,amazonaws.com
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,gravatar.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,jquery.com
+DOMAIN-SUFFIX,jsdelivr.net
+DOMAIN-SUFFIX,ravenjs.com
+DOMAIN-SUFFIX,twilio.com
+DOMAIN-SUFFIX,unpkg.com
