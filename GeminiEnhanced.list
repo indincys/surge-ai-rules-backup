@@ -1,0 +1,54 @@
+# NAME: GeminiEnhanced
+# DESCRIPTION: Narrow Google Gemini ruleset for residential/home-node routing.
+# PLACEMENT: Put this ruleset above generic Google and generic AI rulesets.
+# GOAL: Cover Gemini, AI Studio, NotebookLM, DeepMind, and their login/API edges
+#       without pulling in the entire Google ecosystem.
+# SOURCES: blackmatrix7 Gemini, MetaCubeX google-gemini, bojin google-gemini,
+#          Sukka ai.conf, janlay loc-sens.
+
+# Core Gemini / Google AI surfaces
+DOMAIN,ai.google.dev
+DOMAIN,accounts.google.com
+DOMAIN,ogs.google.com
+DOMAIN,aida.googleapis.com
+DOMAIN,aisandbox-pa.googleapis.com
+DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,antigravity-pa.googleapis.com
+DOMAIN,antigravity.googleapis.com
+DOMAIN,cloudaicompanion.googleapis.com
+DOMAIN,cloudcode-pa.googleapis.com
+DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN,jules.google.com
+DOMAIN,makersuite.google.com
+DOMAIN,notebooklm-pa.googleapis.com
+DOMAIN,notebooklm.googleapis.com
+DOMAIN,phonedeviceverification-pa.googleapis.com
+DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
+
+# Product and site surfaces
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,antigravity-unleash.goog
+DOMAIN-SUFFIX,antigravity.google
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,geller-pa.googleapis.com
+DOMAIN-SUFFIX,gemini.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,jules.google
+DOMAIN-SUFFIX,labs.google
+DOMAIN-SUFFIX,labs.google.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,opal.google
+DOMAIN-SUFFIX,opal.google.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
+
+# Keep the Google login handoff narrow instead of routing all www.google.com
+URL-REGEX,https://www\.google\.com/.*continue=https://gemini\.google\.com.+
