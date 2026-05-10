@@ -16,12 +16,13 @@ Generated from the local Voyager.conf.
 
 ## Voyager remote ruleset replacements
 
-One ruleset per line, without policy group metadata:
+One policyless ruleset URL per line:
 
 - https://raw.githubusercontent.com/indincys/surge-ai-rules-backup/main/QuantumultX/VoyagerRemoteRulesets.qx.txt
 
 ## Notes
 
+- Generated rulesets are policyless: rule rows do not append strategy or policy-group names.
 - PROCESS-NAME and Surge logical rules are not represented in Quantumult X filter resources.
 - Source and skip details are in VoyagerAI.report.md.
 

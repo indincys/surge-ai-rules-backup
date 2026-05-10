@@ -12,7 +12,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "QuantumultX"
-QX_POLICY = "人工智能"
+AI_GROUP = "人工智能"
 RAW_BASE = "https://raw.githubusercontent.com/indincys/surge-ai-rules-backup/main"
 
 RULE_TYPE_MAP = {
@@ -129,7 +129,7 @@ def fetch_text(url: str) -> str:
         return response.read().decode("utf-8", "replace")
 
 
-def qx_rule_from_parts(rule_type: str, value: str, params: list[str], policy: str) -> str | None:
+def qx_rule_from_parts(rule_type: str, value: str, params: list[str]) -> str | None:
     qx_type = RULE_TYPE_MAP.get(rule_type.upper())
     if not qx_type:
         return None
@@ -137,33 +137,33 @@ def qx_rule_from_parts(rule_type: str, value: str, params: list[str], policy: st
     if "ruleset.skk.moe" in cleaned_value:
         return None
     kept = [p for p in params if p.strip().lower() in KEEP_PARAMS]
-    line = f"{qx_type},{cleaned_value},{policy}"
+    line = f"{qx_type},{cleaned_value}"
     if kept:
         line += "," + ",".join(kept)
     return line
 
 
-def qx_domainset_rule(raw: str, policy: str) -> str | None:
+def qx_domainset_rule(raw: str) -> str | None:
     domain = strip_inline_comment(raw).strip()
     if not domain or domain.startswith(("#", ";", "//")):
         return None
     if "ruleset.skk.moe" in domain:
         return None
     if domain.startswith("*."):
-        return f"HOST-WILDCARD,{domain},{policy}"
+        return f"HOST-WILDCARD,{domain}"
     if domain.startswith("."):
-        return f"HOST-SUFFIX,{domain[1:]},{policy}"
+        return f"HOST-SUFFIX,{domain[1:]}"
     if "," in domain:
-        return qx_rule_from_external_line(domain, policy, "DOMAIN-SET")
-    return f"HOST-SUFFIX,{domain},{policy}"
+        return qx_rule_from_external_line(domain, "DOMAIN-SET")
+    return f"HOST-SUFFIX,{domain}"
 
 
-def qx_rule_from_external_line(raw: str, policy: str, source_kind: str = "RULE-SET") -> str | None:
+def qx_rule_from_external_line(raw: str, source_kind: str = "RULE-SET") -> str | None:
     stripped = strip_inline_comment(raw).strip()
     if not stripped or stripped.startswith(("#", ";", "//")):
         return None
     if source_kind == "DOMAIN-SET" and "," not in stripped:
-        return qx_domainset_rule(stripped, policy)
+        return qx_domainset_rule(stripped)
     parts = split_csv(stripped)
     if len(parts) < 2:
         return None
@@ -173,10 +173,10 @@ def qx_rule_from_external_line(raw: str, policy: str, source_kind: str = "RULE-S
     if rule_type not in RULE_TYPE_MAP:
         return None
     tail = parts[2:]
-    return qx_rule_from_parts(rule_type, parts[1], tail, policy)
+    return qx_rule_from_parts(rule_type, parts[1], tail)
 
 
-def qx_rule_from_voyager_line(raw: str, policy: str) -> tuple[str | None, str | None]:
+def qx_rule_from_voyager_line(raw: str) -> tuple[str | None, str | None]:
     body = strip_inline_comment(raw.strip())
     parts = split_csv(body)
     if len(parts) < 3:
@@ -188,7 +188,14 @@ def qx_rule_from_voyager_line(raw: str, policy: str) -> tuple[str | None, str | 
         return None, body
     if rule_type not in RULE_TYPE_MAP:
         return None, body
-    return qx_rule_from_parts(rule_type, parts[1], parts[3:], policy), None
+    return qx_rule_from_parts(rule_type, parts[1], parts[3:]), None
+
+
+def policyless_source_rule(raw: str) -> str:
+    parts = split_csv(strip_inline_comment(raw.strip()))
+    if len(parts) < 3:
+        return strip_inline_comment(raw.strip())
+    return ",".join([parts[0], parts[1], *parts[3:]])
 
 
 def dedupe(lines: list[str]) -> list[str]:
@@ -241,21 +248,25 @@ def qx_url_for_generated(path: Path) -> str:
     return f"{RAW_BASE}/{path.relative_to(ROOT).as_posix()}"
 
 
-def blackmatrix_to_qx(url: str) -> str:
-    converted = url.replace("/rule/Surge/", "/rule/QuantumultX/")
-    converted = converted.replace("/Alibaba/Alibaba_All.list", "/Alibaba/Alibaba.list")
-    converted = converted.replace("/Tencent/Tencent_All.list", "/Tencent/Tencent.list")
-    converted = converted.replace("/China/China_All.list", "/China/China.list")
-    return converted
+def blackmatrix_output_path(url: str) -> Path:
+    parsed = urlsplit(url)
+    parts = [p for p in parsed.path.split("/") if p]
+    try:
+        idx = parts.index("Surge")
+        category = parts[idx + 1]
+        name = Path(parts[idx + 2]).name
+        return OUT_DIR / "Blackmatrix7" / category / name
+    except (ValueError, IndexError):
+        return OUT_DIR / "Blackmatrix7" / f"{url_file_stem(url)}.list"
 
 
-def fetch_convert_write(url: str, kind: str, policy: str, out_path: Path, title: str) -> tuple[str, int]:
+def fetch_convert_write(url: str, kind: str, out_path: Path, title: str) -> tuple[str, int]:
     body = fetch_text(url)
     rules = dedupe(
         [
             rule
             for raw in body.splitlines()
-            if (rule := qx_rule_from_external_line(raw, policy, kind)) is not None
+            if (rule := qx_rule_from_external_line(raw, kind)) is not None
         ]
     )
     write_ruleset(out_path, title, url, rules)
@@ -281,7 +292,7 @@ def parse_remote_rulesets(rule_lines: list[str]) -> list[RemoteRuleSet]:
 
 
 def generate_ai_sets(rule_lines: list[str], remotes: list[RemoteRuleSet]) -> dict[str, str]:
-    ai_remote_urls = {remote.url for remote in remotes if remote.target == QX_POLICY}
+    ai_remote_urls = {remote.url for remote in remotes if remote.target == AI_GROUP}
     ai_source_to_generated: dict[str, str] = {}
     remote_rules_by_url: dict[str, list[str]] = {}
     conversion_report: list[str] = []
@@ -292,12 +303,12 @@ def generate_ai_sets(rule_lines: list[str], remotes: list[RemoteRuleSet]) -> dic
         name = url_file_stem(remote.url)
         out_path = OUT_DIR / f"{name}.list"
         try:
-            qx_url, count = fetch_convert_write(remote.url, remote.kind, QX_POLICY, out_path, name)
+            qx_url, count = fetch_convert_write(remote.url, remote.kind, out_path, name)
             ai_source_to_generated[remote.url] = qx_url
             remote_rules_by_url[remote.url] = [
                 rule
                 for raw in fetch_text(remote.url).splitlines()
-                if (rule := qx_rule_from_external_line(raw, QX_POLICY, remote.kind)) is not None
+                if (rule := qx_rule_from_external_line(raw, remote.kind)) is not None
             ]
             conversion_report.append(f"- {remote.url} -> {qx_url} ({count} rules)")
         except (OSError, RuntimeError, URLError) as exc:
@@ -314,17 +325,17 @@ def generate_ai_sets(rule_lines: list[str], remotes: list[RemoteRuleSet]) -> dic
             continue
         kind = parts[0].upper()
         target = strip_quotes(parts[2])
-        if target != QX_POLICY:
+        if target != AI_GROUP:
             continue
         if kind in {"RULE-SET", "DOMAIN-SET"}:
             combined.extend(remote_rules_by_url.get(strip_quotes(parts[1]), []))
             continue
-        converted, skipped = qx_rule_from_voyager_line(raw, QX_POLICY)
+        converted, skipped = qx_rule_from_voyager_line(raw)
         if converted:
             local_rules.append(converted)
             combined.append(converted)
         elif skipped:
-            skipped_local.append(skipped)
+            skipped_local.append(policyless_source_rule(skipped))
 
     local_rules = dedupe(local_rules)
     combined = dedupe(combined)
@@ -357,13 +368,13 @@ def generate_remote_replacements(remotes: list[RemoteRuleSet], ai_replacements: 
         if url in ai_replacements:
             replacement = ai_replacements[url]
         elif "raw.githubusercontent.com/blackmatrix7/ios_rule_script/" in url and "/rule/Surge/" in url:
-            replacement = blackmatrix_to_qx(url)
+            out_path = blackmatrix_output_path(url)
+            replacement, _ = fetch_convert_write(url, remote.kind, out_path, f"Blackmatrix7 {out_path.stem}")
         elif "ruleset.skk.moe/List/" in url:
             out_path = skk_output_path(url)
             replacement, _ = fetch_convert_write(
                 url,
                 remote.kind,
-                remote.target,
                 out_path,
                 f"SKK {out_path.stem}",
             )
@@ -372,13 +383,12 @@ def generate_remote_replacements(remotes: list[RemoteRuleSet], ai_replacements: 
             replacement, _ = fetch_convert_write(
                 url,
                 remote.kind,
-                remote.target,
                 out_path,
                 f"TutuBetterRules {out_path.stem}",
             )
         else:
             out_path = OUT_DIR / "Converted" / f"{url_file_stem(url)}.list"
-            replacement, _ = fetch_convert_write(url, remote.kind, remote.target, out_path, out_path.stem)
+            replacement, _ = fetch_convert_write(url, remote.kind, out_path, out_path.stem)
 
         if replacement not in generated_seen:
             replacements.append(replacement)
@@ -411,12 +421,13 @@ def write_readme(replacements: list[str]) -> None:
         "",
         "## Voyager remote ruleset replacements",
         "",
-        "One ruleset per line, without policy group metadata:",
+        "One policyless ruleset URL per line:",
         "",
         f"- {qx_url_for_generated(OUT_DIR / 'VoyagerRemoteRulesets.qx.txt')}",
         "",
         "## Notes",
         "",
+        "- Generated rulesets are policyless: rule rows do not append strategy or policy-group names.",
         "- PROCESS-NAME and Surge logical rules are not represented in Quantumult X filter resources.",
         "- Source and skip details are in VoyagerAI.report.md.",
         "",

@@ -1,0 +1,19 @@
+# NAME: Blackmatrix7 Jetbrains
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Jetbrains/Jetbrains.list
+# TOTAL: 14
+
+HOST-SUFFIX,datalore.io
+HOST-SUFFIX,grazie.ai
+HOST-SUFFIX,intellij.com
+HOST-SUFFIX,intellij.net
+HOST-SUFFIX,intellij.org
+HOST-SUFFIX,jetbrains.ai
+HOST-SUFFIX,jetbrains.com
+HOST-SUFFIX,jetbrains.io
+HOST-SUFFIX,jetbrains.net
+HOST-SUFFIX,jetbrains.org
+HOST-SUFFIX,jetbrains.space
+HOST-SUFFIX,jetbrains.team
+HOST-SUFFIX,kotlinconf.com
+HOST-SUFFIX,kotlinlang.org

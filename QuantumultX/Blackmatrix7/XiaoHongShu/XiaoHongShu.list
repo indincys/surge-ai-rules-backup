@@ -1,0 +1,9 @@
+# NAME: Blackmatrix7 XiaoHongShu
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/XiaoHongShu/XiaoHongShu.list
+# TOTAL: 4
+
+HOST-SUFFIX,fengkongcloud.com
+HOST-SUFFIX,xhscdn.com
+HOST-SUFFIX,xhscdn.net
+HOST-SUFFIX,xiaohongshu.com

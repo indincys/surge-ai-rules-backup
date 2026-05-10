@@ -1,0 +1,9 @@
+# NAME: Blackmatrix7 Instagram
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list
+# TOTAL: 4
+
+HOST-SUFFIX,cdninstagram.com
+HOST-SUFFIX,instagr.am
+HOST-SUFFIX,instagram.com
+HOST-KEYWORD,instagram

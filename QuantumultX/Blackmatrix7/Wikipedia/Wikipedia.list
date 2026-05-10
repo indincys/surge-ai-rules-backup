@@ -1,0 +1,17 @@
+# NAME: Blackmatrix7 Wikipedia
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikipedia/Wikipedia.list
+# TOTAL: 12
+
+HOST-SUFFIX,mediawiki.org
+HOST-SUFFIX,wikibooks.org
+HOST-SUFFIX,wikidata.org
+HOST-SUFFIX,wikileaks.org
+HOST-SUFFIX,wikimedia.org
+HOST-SUFFIX,wikinews.org
+HOST-SUFFIX,wikipedia.org
+HOST-SUFFIX,wikiquote.org
+HOST-SUFFIX,wikisource.org
+HOST-SUFFIX,wikiversity.org
+HOST-SUFFIX,wikivoyage.org
+HOST-SUFFIX,wiktionary.org

@@ -3,20 +3,20 @@
 # SOURCE: https://ruleset.skk.moe/List/non_ip/apple_services.conf
 # TOTAL: 17
 
-HOST-SUFFIX,apple.news,Apple
-HOST-SUFFIX,apple-dns.net,Apple
-HOST-SUFFIX,push-apple.com.akadns.net,Apple
-HOST-SUFFIX,organicfruitapps.com,Apple
-HOST-SUFFIX,icloud-content.com,Apple
-HOST-SUFFIX,apple-cloudkit.com,Apple
-HOST-SUFFIX,apple-mapkit.com,Apple
-HOST-SUFFIX,cdn-apple.com,Apple
-HOST-SUFFIX,appstore.com,Apple
-HOST-SUFFIX,aaplimg.com,Apple
-HOST-SUFFIX,itunes.com,Apple
-HOST-SUFFIX,icloud.com,Apple
-HOST-SUFFIX,apple.com,Apple
-HOST-SUFFIX,me.com,Apple
-HOST-SUFFIX,appsto.re,Apple
-HOST-SUFFIX,apple.co,Apple
-IP-CIDR,17.0.0.0/8,Apple,no-resolve
+HOST-SUFFIX,apple.news
+HOST-SUFFIX,apple-dns.net
+HOST-SUFFIX,push-apple.com.akadns.net
+HOST-SUFFIX,organicfruitapps.com
+HOST-SUFFIX,icloud-content.com
+HOST-SUFFIX,apple-cloudkit.com
+HOST-SUFFIX,apple-mapkit.com
+HOST-SUFFIX,cdn-apple.com
+HOST-SUFFIX,appstore.com
+HOST-SUFFIX,aaplimg.com
+HOST-SUFFIX,itunes.com
+HOST-SUFFIX,icloud.com
+HOST-SUFFIX,apple.com
+HOST-SUFFIX,me.com
+HOST-SUFFIX,appsto.re
+HOST-SUFFIX,apple.co
+IP-CIDR,17.0.0.0/8,no-resolve

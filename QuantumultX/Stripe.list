@@ -3,4 +3,4 @@
 # SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Stripe/Stripe.list
 # TOTAL: 1
 
-HOST-KEYWORD,stripe,人工智能
+HOST-KEYWORD,stripe

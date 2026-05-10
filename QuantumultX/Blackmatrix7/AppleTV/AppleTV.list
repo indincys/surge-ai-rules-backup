@@ -1,0 +1,14 @@
+# NAME: Blackmatrix7 AppleTV
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleTV/AppleTV.list
+# TOTAL: 9
+
+HOST,hls-amt.itunes.apple.com
+HOST,hls.itunes.apple.com
+HOST,np-edge.itunes.apple.com
+HOST,play-edge.itunes.apple.com
+HOST,tv.applemusic.com
+HOST,uts-api.itunes.apple.com
+HOST-SUFFIX,tv.apple.com
+USER-AGENT,AppleTV*
+USER-AGENT,com.apple.tv*

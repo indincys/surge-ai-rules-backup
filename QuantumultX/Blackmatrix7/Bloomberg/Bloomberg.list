@@ -1,0 +1,27 @@
+# NAME: Blackmatrix7 Bloomberg
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Bloomberg/Bloomberg.list
+# TOTAL: 22
+
+HOST-SUFFIX,bloomberg.co.kr
+HOST-SUFFIX,bloomberg.com
+HOST-SUFFIX,bloomberg.com.br
+HOST-SUFFIX,bloomberg.fm
+HOST-SUFFIX,bloomberg.tv
+HOST-SUFFIX,bloombergapps.com
+HOST-SUFFIX,bloombergarcade.com
+HOST-SUFFIX,bloombergbeta.com
+HOST-SUFFIX,blpprofessional.com
+HOST-SUFFIX,bmia.org
+HOST-SUFFIX,bnef.com
+HOST-SUFFIX,businessweek.com
+HOST-SUFFIX,businessweekmag.com
+HOST-SUFFIX,bwbx.io
+HOST-SUFFIX,citylab.com
+HOST-SUFFIX,gotraffic.net
+HOST-SUFFIX,londonmithraeum.com
+HOST-SUFFIX,neweconomyforum.com
+HOST-SUFFIX,newenergyfinance.com
+HOST-SUFFIX,quicktake.video
+HOST-SUFFIX,techatbloomberg.com
+HOST-SUFFIX,tictoc.video

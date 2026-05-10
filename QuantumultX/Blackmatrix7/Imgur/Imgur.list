@@ -1,0 +1,7 @@
+# NAME: Blackmatrix7 Imgur
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Imgur/Imgur.list
+# TOTAL: 2
+
+HOST-SUFFIX,imgur.com
+HOST-SUFFIX,imgurinc.com

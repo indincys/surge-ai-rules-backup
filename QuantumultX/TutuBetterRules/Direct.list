@@ -3,5 +3,5 @@
 # SOURCE: https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList/DOMAlN/Direct.list
 # TOTAL: 2
 
-HOST,checkip.amazonaws.com,DIRECT
-HOST,ifconfig.me,DIRECT
+HOST,checkip.amazonaws.com
+HOST,ifconfig.me

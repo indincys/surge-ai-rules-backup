@@ -1,0 +1,21 @@
+# NAME: Blackmatrix7 OneDrive
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list
+# TOTAL: 16
+
+HOST-SUFFIX,1drv.com
+HOST-SUFFIX,livefilestore.com
+HOST-SUFFIX,microsoftpersonalcontent.com
+HOST-SUFFIX,oneclient.sfx.ms
+HOST-SUFFIX,onedrive.com
+HOST-SUFFIX,onedrive.live.com
+HOST-SUFFIX,photos.live.com
+HOST-SUFFIX,sharepoint.com
+HOST-SUFFIX,sharepointonline.com
+HOST-SUFFIX,skydrive.wns.windows.com
+HOST-SUFFIX,spoprod-a.akamaihd.net
+HOST-SUFFIX,storage.live.com
+HOST-SUFFIX,storage.msn.com
+HOST-KEYWORD,1drv
+HOST-KEYWORD,onedrive
+HOST-KEYWORD,skydrive

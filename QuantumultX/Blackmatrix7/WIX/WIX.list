@@ -1,0 +1,14 @@
+# NAME: Blackmatrix7 WIX
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WIX/WIX.list
+# TOTAL: 9
+
+HOST-SUFFIX,editorx.com
+HOST-SUFFIX,parastorage.com
+HOST-SUFFIX,wix-code.com
+HOST-SUFFIX,wix.com
+HOST-SUFFIX,wixanswers.com
+HOST-SUFFIX,wixapps.net
+HOST-SUFFIX,wixmp.com
+HOST-SUFFIX,wixsite.com
+HOST-SUFFIX,wixstatic.com

@@ -12,12 +12,12 @@ Generated files:
 - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Stripe/Stripe.list -> https://raw.githubusercontent.com/indincys/surge-ai-rules-backup/main/QuantumultX/Stripe.list (1 rules)
 
 Skipped local AI rules that have no Quantumult X filter equivalent:
-- `PROCESS-NAME,"/Users/indincys/.codex/plugins/cache/openai-bundled/computer-use/1.0.750/Codex Computer Use.app/",人工智能`
-- `PROCESS-NAME,"/Users/indincys/Library/Application Support/Claude/claude-code/2.1.111/claude.app/",人工智能`
-- `PROCESS-NAME,/Applications/VMark.app/,人工智能`
-- `PROCESS-NAME,/Applications/ChatGPT.app/,人工智能`
-- `PROCESS-NAME,"/Users/indincys/Library/Application Support/Claude/claude-code/2.1.92/claude.app/",人工智能`
-- `PROCESS-NAME,/Applications/Claude.app/,人工智能`
-- `PROCESS-NAME,/Applications/BlueStacksMIM.app/,人工智能`
-- `PROCESS-NAME,/private/tmp/PKInstallSandbox.6x52Qe/Scripts/com.now.gg.BlueStacks.djnJxZ/BlueStacksPreInstall,人工智能`
-- `PROCESS-NAME,/Applications/BlueStacks.app/,人工智能`
+- `PROCESS-NAME,"/Users/indincys/.codex/plugins/cache/openai-bundled/computer-use/1.0.750/Codex Computer Use.app/"`
+- `PROCESS-NAME,"/Users/indincys/Library/Application Support/Claude/claude-code/2.1.111/claude.app/"`
+- `PROCESS-NAME,/Applications/VMark.app/`
+- `PROCESS-NAME,/Applications/ChatGPT.app/`
+- `PROCESS-NAME,"/Users/indincys/Library/Application Support/Claude/claude-code/2.1.92/claude.app/"`
+- `PROCESS-NAME,/Applications/Claude.app/`
+- `PROCESS-NAME,/Applications/BlueStacksMIM.app/`
+- `PROCESS-NAME,/private/tmp/PKInstallSandbox.6x52Qe/Scripts/com.now.gg.BlueStacks.djnJxZ/BlueStacksPreInstall`
+- `PROCESS-NAME,/Applications/BlueStacks.app/`

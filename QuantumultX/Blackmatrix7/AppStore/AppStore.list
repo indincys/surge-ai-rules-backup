@@ -1,0 +1,7 @@
+# NAME: Blackmatrix7 AppStore
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list
+# TOTAL: 2
+
+HOST,apps.apple.com
+HOST,itunes.apple.com

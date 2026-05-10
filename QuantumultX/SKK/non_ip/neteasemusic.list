@@ -3,7 +3,7 @@
 # SOURCE: https://ruleset.skk.moe/List/non_ip/neteasemusic.conf
 # TOTAL: 4
 
-HOST-SUFFIX,music.126.net,DIRECT
-HOST-SUFFIX,music.163.com,DIRECT
-USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90,DIRECT
-USER-AGENT,NeteaseMusic*,DIRECT
+HOST-SUFFIX,music.126.net
+HOST-SUFFIX,music.163.com
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90
+USER-AGENT,NeteaseMusic*

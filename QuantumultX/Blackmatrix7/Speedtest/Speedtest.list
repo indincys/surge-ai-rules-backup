@@ -1,0 +1,11 @@
+# NAME: Blackmatrix7 Speedtest
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list
+# TOTAL: 6
+
+HOST-SUFFIX,fast.com
+HOST-SUFFIX,ooklaserver.net
+HOST-SUFFIX,speed.cloudflare.com
+HOST-SUFFIX,speed.dler.io
+HOST-KEYWORD,speedtest
+USER-AGENT,SpeedTest*

@@ -3,22 +3,22 @@
 # SOURCE: https://norules.oss-cn-shanghai.aliyuncs.com/data/Claude.list
 # TOTAL: 19
 
-HOST,anthropic.com,人工智能
-HOST,apple-relay.apple.com,人工智能
-HOST,apple-relay.cloudflare.com,人工智能
-HOST,apple-relay.fastly-edge.com,人工智能
-HOST,apple-relay.mask.apple-dns.net,人工智能
-HOST,augmentcode.com,人工智能
-HOST,cdn.usefathom.com,人工智能
-HOST,claude.ai,人工智能
-HOST,claude.com,人工智能
-HOST,cp4.cloudflare.com,人工智能
-HOST,cursor-cdn.com,人工智能
-HOST,cursor.com,人工智能
-HOST,cursor.sh,人工智能
-HOST,cursorapi.com,人工智能
-HOST,gspe1-ssl.ls.apple.com,人工智能
-HOST,guzzoni.apple.com,人工智能
-HOST,servd-anthropic-website.b-cdn.net,人工智能
-HOST,workos.com,人工智能
-HOST-SUFFIX,smoot.apple.com,人工智能
+HOST,anthropic.com
+HOST,apple-relay.apple.com
+HOST,apple-relay.cloudflare.com
+HOST,apple-relay.fastly-edge.com
+HOST,apple-relay.mask.apple-dns.net
+HOST,augmentcode.com
+HOST,cdn.usefathom.com
+HOST,claude.ai
+HOST,claude.com
+HOST,cp4.cloudflare.com
+HOST,cursor-cdn.com
+HOST,cursor.com
+HOST,cursor.sh
+HOST,cursorapi.com
+HOST,gspe1-ssl.ls.apple.com
+HOST,guzzoni.apple.com
+HOST,servd-anthropic-website.b-cdn.net
+HOST,workos.com
+HOST-SUFFIX,smoot.apple.com

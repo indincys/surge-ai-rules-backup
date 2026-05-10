@@ -1,0 +1,14 @@
+# NAME: Blackmatrix7 Bing
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Bing/Bing.list
+# TOTAL: 9
+
+HOST-SUFFIX,bing.com
+HOST-SUFFIX,bing.com.cn
+HOST-SUFFIX,bing.net
+HOST-SUFFIX,bingads.com
+HOST-SUFFIX,bingagencyawards.com
+HOST-SUFFIX,bingapistatistics.com
+HOST-SUFFIX,bingsandbox.com
+HOST-SUFFIX,bingvisualsearch.com
+HOST-SUFFIX,bingworld.com

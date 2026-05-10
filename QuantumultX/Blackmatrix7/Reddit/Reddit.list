@@ -1,0 +1,13 @@
+# NAME: Blackmatrix7 Reddit
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Reddit/Reddit.list
+# TOTAL: 8
+
+HOST-SUFFIX,redd.it
+HOST-SUFFIX,reddit.com
+HOST-SUFFIX,redditmail.com
+HOST-SUFFIX,redditmedia.com
+HOST-SUFFIX,redditstatic.com
+HOST-SUFFIX,reddituploads.com
+HOST-SUFFIX,reddituploads.com.cdn-cf.behance.net
+HOST-SUFFIX,reddituploads.com.cdn-cf.dropbox.com

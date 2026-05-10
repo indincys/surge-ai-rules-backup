@@ -1,0 +1,8 @@
+# NAME: Blackmatrix7 Mailru
+# FORMAT: Quantumult X filter
+# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Mailru/Mailru.list
+# TOTAL: 3
+
+HOST-SUFFIX,imgsmail.ru
+HOST-SUFFIX,mail.ru
+HOST-SUFFIX,mycdn.me
