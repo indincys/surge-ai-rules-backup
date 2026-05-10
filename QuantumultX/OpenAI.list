@@ -1,0 +1,39 @@
+# NAME: OpenAI
+# FORMAT: Quantumult X filter
+# SOURCE: https://norules.oss-cn-shanghai.aliyuncs.com/data/OpenAI.list
+# TOTAL: 34
+
+HOST,browser-intake-datadoghq.com,人工智能
+HOST,chat.openai.com.cdn.cloudflare.net,人工智能
+HOST,openai-api.arkoselabs.com,人工智能
+HOST,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,人工智能
+HOST,openaicomproductionae4b.blob.core.windows.net,人工智能
+HOST,production-openaicom-storage.azureedge.net,人工智能
+HOST,static.cloudflareinsights.com,人工智能
+HOST-KEYWORD,openai,人工智能
+HOST-SUFFIX,ai.com,人工智能
+HOST-SUFFIX,algolia.net,人工智能
+HOST-SUFFIX,api.statsig.com,人工智能
+HOST-SUFFIX,auth0.com,人工智能
+HOST-SUFFIX,chatgpt.com,人工智能
+HOST-SUFFIX,chatgpt.livekit.cloud,人工智能
+HOST-SUFFIX,client-api.arkoselabs.com,人工智能
+HOST-SUFFIX,crixet.com,人工智能
+HOST-SUFFIX,events.statsigapi.net,人工智能
+HOST-SUFFIX,featuregates.org,人工智能
+HOST-SUFFIX,host.livekit.cloud,人工智能
+HOST-SUFFIX,identrust.com,人工智能
+HOST-SUFFIX,intercom.io,人工智能
+HOST-SUFFIX,intercomcdn.com,人工智能
+HOST-SUFFIX,launchdarkly.com,人工智能
+HOST-SUFFIX,oaistatic.com,人工智能
+HOST-SUFFIX,oaiusercontent.com,人工智能
+HOST-SUFFIX,observeit.net,人工智能
+HOST-SUFFIX,openai.com,人工智能
+HOST-SUFFIX,openaiapi-site.azureedge.net,人工智能
+HOST-SUFFIX,openaicom.imgix.net,人工智能
+HOST-SUFFIX,segment.io,人工智能
+HOST-SUFFIX,sentry.io,人工智能
+HOST-SUFFIX,turn.livekit.cloud,人工智能
+IP-CIDR,24.199.123.28/32,人工智能,no-resolve
+IP-CIDR,64.23.132.171/32,人工智能,no-resolve

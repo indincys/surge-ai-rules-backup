@@ -1,0 +1,10 @@
+# NAME: SKK telegram_asn
+# FORMAT: Quantumult X filter
+# SOURCE: https://ruleset.skk.moe/List/ip/telegram_asn.conf
+# TOTAL: 5
+
+IP-ASN,62041,Proxy
+IP-ASN,62014,Proxy
+IP-ASN,59930,Proxy
+IP-ASN,44907,Proxy
+IP-ASN,211157,Proxy

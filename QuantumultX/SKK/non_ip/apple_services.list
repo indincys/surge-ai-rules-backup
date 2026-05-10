@@ -1,0 +1,22 @@
+# NAME: SKK apple_services
+# FORMAT: Quantumult X filter
+# SOURCE: https://ruleset.skk.moe/List/non_ip/apple_services.conf
+# TOTAL: 17
+
+HOST-SUFFIX,apple.news,Apple
+HOST-SUFFIX,apple-dns.net,Apple
+HOST-SUFFIX,push-apple.com.akadns.net,Apple
+HOST-SUFFIX,organicfruitapps.com,Apple
+HOST-SUFFIX,icloud-content.com,Apple
+HOST-SUFFIX,apple-cloudkit.com,Apple
+HOST-SUFFIX,apple-mapkit.com,Apple
+HOST-SUFFIX,cdn-apple.com,Apple
+HOST-SUFFIX,appstore.com,Apple
+HOST-SUFFIX,aaplimg.com,Apple
+HOST-SUFFIX,itunes.com,Apple
+HOST-SUFFIX,icloud.com,Apple
+HOST-SUFFIX,apple.com,Apple
+HOST-SUFFIX,me.com,Apple
+HOST-SUFFIX,appsto.re,Apple
+HOST-SUFFIX,apple.co,Apple
+IP-CIDR,17.0.0.0/8,Apple,no-resolve

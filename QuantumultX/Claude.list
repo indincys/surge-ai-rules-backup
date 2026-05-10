@@ -1,0 +1,24 @@
+# NAME: Claude
+# FORMAT: Quantumult X filter
+# SOURCE: https://norules.oss-cn-shanghai.aliyuncs.com/data/Claude.list
+# TOTAL: 19
+
+HOST,anthropic.com,人工智能
+HOST,apple-relay.apple.com,人工智能
+HOST,apple-relay.cloudflare.com,人工智能
+HOST,apple-relay.fastly-edge.com,人工智能
+HOST,apple-relay.mask.apple-dns.net,人工智能
+HOST,augmentcode.com,人工智能
+HOST,cdn.usefathom.com,人工智能
+HOST,claude.ai,人工智能
+HOST,claude.com,人工智能
+HOST,cp4.cloudflare.com,人工智能
+HOST,cursor-cdn.com,人工智能
+HOST,cursor.com,人工智能
+HOST,cursor.sh,人工智能
+HOST,cursorapi.com,人工智能
+HOST,gspe1-ssl.ls.apple.com,人工智能
+HOST,guzzoni.apple.com,人工智能
+HOST,servd-anthropic-website.b-cdn.net,人工智能
+HOST,workos.com,人工智能
+HOST-SUFFIX,smoot.apple.com,人工智能

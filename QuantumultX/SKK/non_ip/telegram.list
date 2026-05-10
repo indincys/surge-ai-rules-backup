@@ -1,0 +1,19 @@
+# NAME: SKK telegram
+# FORMAT: Quantumult X filter
+# SOURCE: https://ruleset.skk.moe/List/non_ip/telegram.conf
+# TOTAL: 14
+
+HOST-SUFFIX,telegram.space,Proxy
+HOST-SUFFIX,cdn-telegram.org,Proxy
+HOST-SUFFIX,telegram.org,Proxy
+HOST-SUFFIX,graph.org,Proxy
+HOST-SUFFIX,telega.one,Proxy
+HOST-SUFFIX,telegram.dog,Proxy
+HOST-SUFFIX,tg.dev,Proxy
+HOST-SUFFIX,tdesktop.com,Proxy
+HOST-SUFFIX,telegra.ph,Proxy
+HOST-SUFFIX,legra.ph,Proxy
+HOST-SUFFIX,telesco.pe,Proxy
+HOST-SUFFIX,telegram.me,Proxy
+HOST-SUFFIX,tx.me,Proxy
+HOST-SUFFIX,t.me,Proxy
