@@ -62,6 +62,11 @@ DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,googletagmanager.com
 
+# User-requested Google support surfaces
+DOMAIN-SUFFIX,play.google.com
+DOMAIN-SUFFIX,clients6.google.com
+DOMAIN-SUFFIX,one.google.com
+
 # Gemini-related keyword matches retained from upstream Gemini lists
 DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
 DOMAIN-KEYWORD,colab
